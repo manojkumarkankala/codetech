@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codetech-sable.vercel.app/sitemap.xml
