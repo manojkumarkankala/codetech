@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTech - Modern Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+           
+            <div class="logo">
+                <h2>CodeTech</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+<section id="home" class="hero">
+    
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="https://res.cloudinary.com/dptxuxhbm/video/upload/v1775972683/Firefly_Create_a_cinematic_video_showing_the_process_of_building_a_modern_website_from_start_to_fini_pxv0ub.mp4" type="video/mp4">
+    </video>
+    <!-- Content -->
+    <div class="hero-container fade-in">
+        <h1>We Build Powerful &amp; Modern Websites</h1>
+        <p class="pera-text">Showcasing creativity, performance, and innovation</p>
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+    </div>
+
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <h2 class="section-title">About CodeTech</h2>
+            <p>
+                CodeTech is a web development service where we create modern, fast, and user-friendly 
+                websites for businesses and individuals. Our focus is on delivering high-quality solutions 
+                that drive results and exceed expectations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom websites built with modern technologies and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Websites</h3>
+                    <p>Complete online stores with payment integration and inventory management.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, intuitive designs that provide exceptional user experiences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility and ranking on search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Requirement Discussion</h3>
+                    <p>We understand your needs and goals</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Design</h3>
+                    <p>Creating beautiful wireframes and mockups</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Development</h3>
+                    <p>Building your website with modern technologies</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Testing</h3>
+                    <p>Thorough testing for quality assurance</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <h3>Delivery</h3>
+                    <p>Final delivery and ongoing support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to start your project?</h3>
+                    <p>Send us a message and we'll get back to you within 24 hours.</p>
+                    <a href="https://wa.me/918341827908" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&amp;copy; 2026 CodeTech | Built with team <span class="heart"><i class="fas fa-heart"></i></span></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918341827908" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
