@@ -1,29 +1,41 @@
 // Portfolio data
-const portfolioData = [
-    {
-        img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9',
+const portfolioData = [{
+        img: 'https://res.cloudinary.com/dptxuxhbm/image/upload/v1776041099/mmmobiles_loxnuo.png',
         title: 'MMMobiles Website',
         description: 'Modern mobile store website showcasing latest smartphones with clean UI and responsive design',
         link: 'https://mmmobiles-eight.vercel.app/'
     },
     {
-      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
-      title: 'CC Camera Website',
-      description: 'Professional CCTV and security camera website showcasing wired and wireless cameras with modern UI and responsive design',
-      link: 'https://cccamera.ccbp.tech/'
+        img: 'https://res.cloudinary.com/dptxuxhbm/image/upload/v1776041046/msinfotech_cctv_xhtseb.png',
+        title: 'CC Camera Website',
+        description: 'Professional CCTV and security camera website showcasing wired and wireless cameras with modern UI and responsive design',
+        link: 'https://cccamera.ccbp.tech/'
     },
     {
-     img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449',
-     title: 'Best Fertilizers Website',
-     description: 'Agriculture-focused website providing high-quality fertilizers, crop nutrition solutions, and modern farming support for better yield',
-     link: 'https://bestfertilizers.ccbp.tech/'
+        img: "https://res.cloudinary.com/dptxuxhbm/image/upload/v1776040933/fetilizers_clgeu6.png",
+        title: 'Best Fertilizers Website',
+        description: 'Agriculture-focused website providing high-quality fertilizers, crop nutrition solutions, and modern farming support for better yield',
+        link: 'https://bestfertilizers.ccbp.tech/'
     },
-   {
-     img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1',
-     title: 'Anil Dhaba Website',
-     description: 'Authentic dhaba-style restaurant website showcasing spicy non-veg dishes with traditional flavors and modern responsive design',
-     link: 'https://anil-dhaba.vercel.app/'
+    {
+        img: 'https://res.cloudinary.com/dptxuxhbm/image/upload/v1776040699/anildhaba_v81gi0.png',
+        title: 'Anil Dhaba Website',
+        description: 'Authentic dhaba-style restaurant website showcasing spicy non-veg dishes with traditional flavors and modern responsive design',
+        link: 'https://anil-dhaba.vercel.app/'
+    },
+    {
+        img: 'https://res.cloudinary.com/dptxuxhbm/image/upload/v1776040984/fashion_hub_ttfsbl.png',
+        title: 'Fashion Hub Website',
+        description: 'Modern clothing store website showcasing trendy outfits, stylish collections, and responsive e-commerce design for a seamless shopping experience',
+        link: 'https://fashion-hub-blond.vercel.app/'
+    },
+    {
+        img: ' https://res.cloudinary.com/dptxuxhbm/image/upload/v1776181393/Screenshot_2026-04-14_211243_qfbllh.png',
+        title: 'SMK DAIRY Website',
+        description: "We provide 100% pure, farm-fresh milk and traditional hand-churned ghee, delivered straight from our dairy to your doorstep",
+        link: 'https://smk-dairy.vercel.app/'
     }
+
 ];
 
 // DOM Elements
@@ -51,7 +63,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -66,19 +78,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Load portfolio items
 function loadPortfolio() {
     portfolioGrid.innerHTML = '';
+
     portfolioData.forEach(item => {
         const portfolioItem = document.createElement('div');
         portfolioItem.className = 'portfolio-item';
+
         portfolioItem.innerHTML = `
-            <div class="portfolio-img" style="background-image: url('${item.img}')"></div>
+            <div class="portfolio-img" 
+                 style="background-image: url('${item.img}')">
+            </div>
+
             <div class="portfolio-content">
                 <h3>${item.title}</h3>
                 <p>${item.description}</p>
-                 <a href="${item.link}" target="_blank" class="view-btn">
+
+                <a href="${item.link}" target="_blank" class="view-btn">
                     View Website
                 </a>
             </div>
         `;
+
         portfolioGrid.appendChild(portfolioItem);
     });
 }
@@ -86,10 +105,10 @@ function loadPortfolio() {
 // Scroll animations
 function handleScrollAnimations() {
     const triggerBottom = window.innerHeight * 0.85;
-    
+
     fadeElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
-        
+
         if (elementTop < triggerBottom) {
             element.classList.add('visible');
         }
@@ -113,14 +132,25 @@ function handleScrollAnimations() {
 // Contact form handling
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
-    
+
     if (name && phone && message) {
         // Basic validation passed
-        alert('Thank you for your message! We will get back to you within 24 hours.');
+        //alert('Thank you for your message! We will get back to you within 24 hours.');
+        const whatsappNumber = "918341827908"; // change to your number
+
+        // Create message
+        const text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+
+        // WhatsApp URL
+        const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+        // Open WhatsApp
+        window.open(url, '_blank');
+
         contactForm.reset();
     } else {
         alert('Please fill in all fields.');
