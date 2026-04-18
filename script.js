@@ -31,7 +31,7 @@ const portfolioData = [{
     },
     {
         img: ' https://res.cloudinary.com/dptxuxhbm/image/upload/v1776181393/Screenshot_2026-04-14_211243_qfbllh.png',
-        title: 'SMK DAIRY Website',
+        title: 'SNK DAIRY Website',
         description: "We provide 100% pure, farm-fresh milk and traditional hand-churned ghee, delivered straight from our dairy to your doorstep",
         link: 'https://smk-dairy.vercel.app/'
     }
