@@ -138,30 +138,7 @@
   }
 }
 
-/* Content above video */
-.hero-container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 /* Navbar */
 .navbar {
