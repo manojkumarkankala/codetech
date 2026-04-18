@@ -1,113 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-/* Base Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-section {
-  padding: 40px 20px;
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: #fff;
 }
 
-h1 {
-  font-size: 26px;
+/* Background Video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark Overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* Content Container */
+.hero-container {
+  max-width: 900px;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Headings */
+.hero-container h1 {
+  font-size: 42px;
   margin-bottom: 15px;
 }
 
-h2 {
-  font-size: 18px;
+.hero-container h2 {
+  font-size: 28px;
   margin-top: 20px;
 }
 
-p {
-  font-size: 10px;
-  max-width: 800px;
-  margin: 10px auto;
+/* Paragraphs */
+.hero-container p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.pera-text {
+  font-style: italic;
+  opacity: 0.9;
 }
 
 /* Buttons */
+.hero-buttons {
+  margin-top: 20px;
+}
+
 .btn {
   display: inline-block;
   margin: 10px;
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
+  padding: 12px 22px;
   border-radius: 6px;
-  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.btn-primary {
+  background: #007bff;
 }
 
-/* 📱 Mobile Styles */
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #28a745;
+}
+
+.btn-secondary:hover {
+  background: #1e7e34;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 22px;
+  .hero {
+    height: auto;
+    padding: 60px 15px;
   }
 
-  h2 {
-    font-size: 19px;
+  .hero-container h1 {
+    font-size: 26px;
   }
 
-  p {
-    font-size: 10px;
-    padding: 0 10px;
+  .hero-container h2 {
+    font-size: 20px;
   }
 
-  section {
-    padding: 30px 15px;
+  .hero-container p {
+    font-size: 14px;
   }
 
   .btn {
     display: block;
     width: 80%;
     margin: 10px auto;
-    font-size: 10px;
+    font-size: 14px;
   }
-}
-.pera-text{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-}
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-/* Background Video */
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 130vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-/* Optional Dark Overlay */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 130vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
 }
 
 /* Content above video */
